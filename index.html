@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
-<!-- saved from url=(0079)file:///C:/Users/Hp/Desktop/STUDENT%20ATTENDANCE%20SYSTEM/index.html#addStudent -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Attendance System</title>
-    <link rel="stylesheet" href="./Student Attendance System_files/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -15,10 +16,10 @@
         <h2>Attendance<br>System</h2>
 
         <nav>
-            <a href="file:///C:/Users/Hp/Desktop/STUDENT%20ATTENDANCE%20SYSTEM/index.html#dashboard">🏠 Dashboard</a>
-            <a href="file:///C:/Users/Hp/Desktop/STUDENT%20ATTENDANCE%20SYSTEM/index.html#addStudent">👤 Add Students</a>
-            <a href="file:///C:/Users/Hp/Desktop/STUDENT%20ATTENDANCE%20SYSTEM/index.html#attendance">📋 Mark Attendance</a>
-            <a href="file:///C:/Users/Hp/Desktop/STUDENT%20ATTENDANCE%20SYSTEM/index.html#records">🕒 Records</a>
+            <a href="#dashboard">🏠 Dashboard</a>
+            <a href="#addStudent">👤 Add Students</a>
+            <a href="#attendance">📋 Mark Attendance</a>
+            <a href="#records">🕒 Records</a>
         </nav>
 
         <div class="sidebar-bottom">
@@ -43,7 +44,7 @@
                 <span>👥</span>
                 <div>
                     <h3>Total Students</h3>
-                    <p id="total">3</p>
+                    <p id="total">0</p>
                 </div>
             </div>
 
@@ -51,7 +52,7 @@
                 <span>✔️</span>
                 <div>
                     <h3>Present</h3>
-                    <p id="present">1</p>
+                    <p id="present">0</p>
                 </div>
             </div>
 
@@ -59,7 +60,7 @@
                 <span>❌</span>
                 <div>
                     <h3>Absent</h3>
-                    <p id="absent">2</p>
+                    <p id="absent">0</p>
                 </div>
             </div>
 
@@ -67,7 +68,7 @@
                 <span>📊</span>
                 <div>
                     <h3>Attendance</h3>
-                    <p id="percentage">33%</p>
+                    <p id="percentage">0%</p>
                 </div>
             </div>
 
@@ -80,10 +81,12 @@
                 <p class="subtitle">Enter student information below</p>
 
                 <label>Student Name</label>
-                <input type="text" id="studentName" placeholder="Enter student name">
+                <input type="text" id="studentName"
+                    placeholder="Enter student name">
 
                 <label>Roll Number</label>
-                <input type="text" id="rollNumber" placeholder="Enter roll number">
+                <input type="text" id="rollNumber"
+                    placeholder="Enter roll number">
 
                 <button class="primary-btn" onclick="addStudent()">
                     + Add Student
@@ -100,11 +103,13 @@
                 </div>
 
                 <div class="button-row">
-                    <button class="present-btn" onclick="markAll('Present')">
+                    <button class="present-btn"
+                        onclick="markAll('Present')">
                         ✔ Mark All Present
                     </button>
 
-                    <button class="save-btn" onclick="saveAttendance()">
+                    <button class="save-btn"
+                        onclick="saveAttendance()">
                         💾 Save Attendance
                     </button>
                 </div>
@@ -120,49 +125,7 @@
                             </tr>
                         </thead>
 
-                        <tbody id="studentList"><tr>
-            <td>01</td>
-            <td>SAIF ALI</td>
-            <td>
-                <select class="status-select" onchange="changeStatus('17939814190290.5561416949299834', this.value)">
-                    <option value="Present">Present</option>
-                    <option value="Absent" selected="">Absent</option>
-                </select>
-            </td>
-            <td>
-                <button class="delete-btn" onclick="deleteStudent('17939814190290.5561416949299834')">
-                    Delete
-                </button>
-            </td>
-        </tr><tr>
-            <td>02</td>
-            <td>NADIA</td>
-            <td>
-                <select class="status-select" onchange="changeStatus('17939814691870.22493651233866774', this.value)">
-                    <option value="Present">Present</option>
-                    <option value="Absent" selected="">Absent</option>
-                </select>
-            </td>
-            <td>
-                <button class="delete-btn" onclick="deleteStudent('17939814691870.22493651233866774')">
-                    Delete
-                </button>
-            </td>
-        </tr><tr>
-            <td>03</td>
-            <td>HUMA</td>
-            <td>
-                <select class="status-select" onchange="changeStatus('17939815253190.5299598754269753', this.value)">
-                    <option value="Present">Present</option>
-                    <option value="Absent" selected="">Absent</option>
-                </select>
-            </td>
-            <td>
-                <button class="delete-btn" onclick="deleteStudent('17939815253190.5299598754269753')">
-                    Delete
-                </button>
-            </td>
-        </tr></tbody>
+                        <tbody id="studentList"></tbody>
                     </table>
                 </div>
             </div>
@@ -176,12 +139,13 @@
                     <p class="subtitle">Your previously saved records</p>
                 </div>
 
-                <button class="primary-btn" onclick="showHistory()">
+                <button class="primary-btn"
+                    onclick="showHistory()">
                     View Records
                 </button>
             </div>
 
-            <div id="history"><p>2026-11-06 — Present: 0, Absent: 0, Total: 0</p><p>2026-11-05 — Present: 0, Absent: 0, Total: 0</p></div>
+            <div id="history"></div>
         </section>
 
         <footer>
@@ -192,8 +156,7 @@
 
 </div>
 
-<script src="./Student Attendance System_files/script.js"></script>
+<script src="script.js"></script>
 
-
-
-</body></html>
+</body>
+</html>
